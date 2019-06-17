@@ -1,0 +1,84 @@
+body {
+	background-color: whitesmoke;
+}
+a[href="twitter"] {
+    background: url("twitter.png") no-repeat;
+    width: 48px;
+    height: 50px;
+    display:inline-block;
+}
+
+ul li {
+    text-align: center;
+    list-style-type:none;
+}
+
+ul li:nth-child(3) {
+    color:rgb(134,136,138);
+    font-style: italic;
+    font-family: Arial, sans-serif;
+}
+
+ul li:nth-child(2) p {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: rgb(45,47,48);
+}
+
+p a:nth-child(1) {
+    cursor: pointer;
+    margin-left:6px;
+    margin-right:6px;
+}
+
+p a:nth-child(2) {
+    font-weight: normal;
+    color: rgb(162,163,165);
+    font-family: Arial, sans-serif;
+}
+
+body div {
+    text-align: center;
+    margin-top: 60px;
+
+}
+
+div label {
+
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+label span {
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border: 1px solid gray;
+    position:relative;
+    border-radius: 50%;
+    cursor:pointer;
+    margin-right: 5px;
+}
+
+span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    opacity: 0;
+    transition: .2s;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked + span::before {
+    opacity: 1;
+
+}
